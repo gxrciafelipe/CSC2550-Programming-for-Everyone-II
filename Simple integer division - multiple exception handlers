@@ -1,0 +1,16 @@
+try:
+    # Read inputs from the user
+    user_num = int(input())
+    div_num = int(input())
+    
+    # Perform integer division
+    result = user_num // div_num
+    print(result)
+
+except ZeroDivisionError as e:
+    # Catch division by zero and print the specific error message
+    print(f"Zero Division Exception: {e}")
+
+except ValueError as e:
+    # Catch invalid data types (like floats or strings) and print the message
+    print(f"Input Exception: {e}")
