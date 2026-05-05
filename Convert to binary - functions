@@ -1,0 +1,23 @@
+#CONVERTING A NUMBER TO BINARY
+def int_to_reverse_binary(integer_value):
+"""Transforms a decimal number into a binary one"""
+    bin = []
+    while integer_value > 0:
+        bin.append(str(integer_value % 2))
+        integer_value = integer_value // 2
+    result="".join(bin)
+    return (result)
+
+def string_reverse(input_string):
+"""Reverses the string"""
+    result = input_string[::-1]
+    return (result)
+
+if __name__ == "__main__":
+    pos_int = int(input())
+    if pos_int == 0:
+        print("0")
+    else:
+        out_string = int_to_reverse_binary(pos_int)
+        rev_string = string_reverse(out_string)
+        print(rev_string)
